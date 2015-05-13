@@ -34,4 +34,65 @@
     </div>
 
   </div>
+
+  <div class="row text-center" id= "symptoms">
+    <%= form_for :disease do |f| %>
+  <p><%= f.label "Do you have a fever?" %></p>
+  <p><%= f.label "Yes" %>
+  <%= f.radio_button("fever", "yes") %>
+  <%= f.label "No" %>
+  <%= f.radio_button("fever", "no") %></p>
+
+  <p><%= f.label "Do you have diarrhea?" %></p>
+  <p><%= f.label "Yes" %>
+  <%= f.radio_button("diarrhea", "yes") %>
+  <%= f.label "No" %>
+  <%= f.radio_button("diarrhea", "no") %></p>
+
+  <p><%= f.label "Do you feel sluggish?" %></p>
+  <p><%= f.label "Yes" %>
+  <%= f.radio_button("sluggish", "yes") %>
+  <%= f.label "No" %>
+  <%= f.radio_button("sluggish", "no") %></p>
+
+  <p><%= f.label "Do you feel depressed?" %></p>
+  <p><%= f.label "Yes" %>
+  <%= f.radio_button("depression", "yes") %>
+  <%= f.label "No" %>
+  <%= f.radio_button("depression", "no") %></p>
+
+  <p><%= f.label "Have you recently taken a long trip?" %></p>
+  <p><%= f.label "Yes" %>
+  <%= f.radio_button("travels", "yes") %>
+  <%= f.label "No" %>
+  <%= f.radio_button("travels", "no") %></p>
+
+  <p><%= f.label "Do you fear sunlight?" %></p>
+  <p><%= f.label "Yes" %>
+  <%= f.radio_button("vampire", "yes") %>
+  <%= f.label "No" %>
+  <%= f.radio_button("vampire", "no") %></p>
+
+  <p><%= f.label "Do you feel differently around the full moon?" %></p>
+  <p><%= f.label "Yes" %>
+  <%= f.radio_button("werewolf", "yes") %>
+  <%= f.label "No" %>
+  <%= f.radio_button("werewolf", "no") %></p>
+
+  <p><%= f.label "Do you sometimes want to carve 666 into people's skin?" %></p>
+  <p><%= f.label "Yes" %>
+  <%= f.radio_button("antichrist", "yes") %>
+  <%= f.label "No" %>
+  <%= f.radio_button("antichrist", "no") %></p>
+
+  <p><%= f.label "Do you crave human flesh?" %></p>
+  <p><%= f.label "Yes" %>
+  <%= f.radio_button("zombie", "yes") %>
+  <%= f.label "No" %>
+  <%= f.radio_button("zombie", "no") %></p>
+
+  <%= f.submit "Discover Your Fate", class: "btn btn-danger" %>
+<% end %>
+
+  </div>
 </div>

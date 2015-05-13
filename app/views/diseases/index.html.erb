@@ -1,57 +1,55 @@
-<%= form_for :disease do |f| %>
-	<p><%= f.label "Do you have a fever?" %></p>
-	<p><%= f.label "Yes" %>
-	<%= f.radio_button("fever", "yes") %>
-	<%= f.label "No" %>
-	<%= f.radio_button("fever", "no") %></p>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-offset-1 col-md-2">
+      <%= image_tag("webfu.png", class: "icon" ) %>
+    </div>
+    <div class="col-md-4 icon">
+       <div class="form-group">
+        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Search">
 
-	<p><%= f.label "Do you have diarrhea?" %></p>
-	<p><%= f.label "Yes" %>
-	<%= f.radio_button("diarrhea", "yes") %>
-	<%= f.label "No" %>
-	<%= f.radio_button("diarrhea", "no") %></p>
+      </div>
+    </div>
+    <div class="col-md-offset-1 col-md-2">
+      <%= image_tag("nav_bar.png", class: "icon") %>
+    </div>
+  </div>
+  <div class="row base-bar">
+    <div class="col-md-offset-1  col-md-2">
+      <p>Health A-Z</p>
+    </div>
+    <div class="col-md-2">
+      <p>Drugs & Supplements</p>
+    </div>
+    <div class="col-md-2">
+      <p>Living Healthy</p>
+    </div>
+    <div class="col-md-2">
+      <p>Family & Pregnancy</p>
+    </div>
+    <div class="col-md-2">
+      <p>News & Experts</p>
+    </div>
+    <div class="col-md-1">
+      <%= image_tag("social_media.png", class: "small") %>
+    </div>
+  </div>
 
-	<p><%= f.label "Do you feel sluggish?" %></p>
-	<p><%= f.label "Yes" %>
-	<%= f.radio_button("sluggish", "yes") %>
-	<%= f.label "No" %>
-	<%= f.radio_button("sluggish", "no") %></p>
+  <div class="container">
+  <div class="row">
+		<% if  %>
+			 testing
+		<% elsif @diseases.count == 1 %>
+			<h1>You will probably die of @diseases.first.name </h1>
 
-	<p><%= f.label "Do you feel depressed?" %></p>
-	<p><%= f.label "Yes" %>
-	<%= f.radio_button("depression", "yes") %>
-	<%= f.label "No" %>
-	<%= f.radio_button("depression", "no") %></p>
-
-	<p><%= f.label "Have you recently taken a long trip?" %></p>
-	<p><%= f.label "Yes" %>
-	<%= f.radio_button("travels", "yes") %>
-	<%= f.label "No" %>
-	<%= f.radio_button("travels", "no") %></p>
-
-	<p><%= f.label "Do you fear sunlight?" %></p>
-	<p><%= f.label "Yes" %>
-	<%= f.radio_button("vampire", "yes") %>
-	<%= f.label "No" %>
-	<%= f.radio_button("vampire", "no") %></p>
-
-	<p><%= f.label "Do you feel differently around the full moon?" %></p>
-	<p><%= f.label "Yes" %>
-	<%= f.radio_button("werewolf", "yes") %>
-	<%= f.label "No" %>
-	<%= f.radio_button("werewolf", "no") %></p>
-
-	<p><%= f.label "Do you sometimes want to carve 666 into people's skin?" %></p>
-	<p><%= f.label "Yes" %>
-	<%= f.radio_button("antichrist", "yes") %>
-	<%= f.label "No" %>
-	<%= f.radio_button("antichrist", "no") %></p>
-
-	<p><%= f.label "Do you crave human flesh?" %></p>
-	<p><%= f.label "Yes" %>
-	<%= f.radio_button("zombie", "yes") %>
-	<%= f.label "No" %>
-	<%= f.radio_button("zombie", "no") %></p>
-
-	<%= f.submit "Discover Your Fate" %>
-<% end %>
+			<%= image_tag(@diseases.first.photo) %>
+		<% else %>
+			<h1>You May Die of Multiple Diseases</h1>
+			<h4>Here is a list of your possible ailments:</h4>	
+			<% @diseases.each do |disease| %>
+				<%= disease.name  %>
+				<%= disease.photo %>
+				<%= disease.description %>
+			<% end %>
+		<% end %>
+	</div>
+</div>

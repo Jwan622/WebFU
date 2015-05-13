@@ -1,2 +1,69 @@
-<h1>Diseases#index</h1>
-<p>Find me in app/views/diseases/index.html.erb</p>
+<%= form_for :disease do |f| %>
+	<p><%= f.label "Do you have a fever?" %></p>
+	<p><%= f.label "Yes" %>
+	<%= f.radio_button("post", "yes", checked: true) %>
+	<%= f.label "No" %>
+	<%= f.radio_button("post", "no") %></p>
+
+	<p><%= f.label "Do you have diarrhea?" %></p>
+	<p><%= f.label "Yes" %>
+	<%= f.radio_button("post", "yes", checked: true) %>
+	<%= f.label "No" %>
+	<%= f.radio_button("post", "no") %></p>
+
+	<p><%= f.label "Do you feel sluggish?" %></p>
+	<p><%= f.label "Yes" %>
+	<%= f.radio_button("post", "yes", checked: true) %>
+	<%= f.label "No" %>
+	<%= f.radio_button("post", "no") %></p>
+
+	<p><%= f.label "Do you feel depressed?" %></p>
+	<p><%= f.label "Yes" %>
+	<%= f.radio_button("post", "yes", checked: true) %>
+	<%= f.label "No" %>
+	<%= f.radio_button("post", "no") %></p>
+
+	<p><%= f.label "Do you eat a lot?" %></p>
+	<p><%= f.label "Yes" %>
+	<%= f.radio_button("post", "yes", checked: true) %>
+	<%= f.label "No" %>
+	<%= f.radio_button("post", "no") %></p>
+
+	<p><%= f.label "Do you barely eat?" %></p>
+	<p><%= f.label "Yes" %>
+	<%= f.radio_button("post", "yes", checked: true) %>
+	<%= f.label "No" %>
+	<%= f.radio_button("post", "no") %></p>
+
+	<p><%= f.label "Have you recently taken a long trip?" %></p>
+	<p><%= f.label "Yes" %>
+	<%= f.radio_button("post", "yes", checked: true) %>
+	<%= f.label "No" %>
+	<%= f.radio_button("post", "no") %></p>
+
+	<p><%= f.label "Do you fear sunlight?" %></p>
+	<p><%= f.label "Yes" %>
+	<%= f.radio_button("post", "yes", checked: true) %>
+	<%= f.label "No" %>
+	<%= f.radio_button("post", "no") %></p>
+
+	<p><%= f.label "Do you feel differently around the full moon?" %></p>
+	<p><%= f.label "Yes" %>
+	<%= f.radio_button("post", "yes", checked: true) %>
+	<%= f.label "No" %>
+	<%= f.radio_button("post", "no") %></p>
+
+	<p><%= f.label "Do you sometimes want to carve 666 into people's skin?" %></p>
+	<p><%= f.label "Yes" %>
+	<%= f.radio_button("post", "yes", checked: true) %>
+	<%= f.label "No" %>
+	<%= f.radio_button("post", "no") %></p>
+
+	<p><%= f.label "Do you crave human flesh?" %></p>
+	<p><%= f.label "Yes" %>
+	<%= f.radio_button("post", "yes", checked: true) %>
+	<%= f.label "No" %>
+	<%= f.radio_button("post", "no") %></p>
+
+	<%= f.submit "Discover Your Fate" %>
+<% end %>

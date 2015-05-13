@@ -1,16 +1,12 @@
 class DiseasesController < ApplicationController
-  def index
-  end
-
-  def new
-  end
-
   def create
   	diseases = params[:disease]
 		present_symptoms = diseases.select { |key, hash| diseases[key] == "yes" }
-  	Disease.where(symptoms: present_symptoms.keys)
+  	@diseases = Disease.where(symptoms: present_symptoms.keys)
+  	redirect_to diseases_path(diseases: @diseases)
   end
 
-  def show
+  def index
+  	@diseases = params[:diseases]
   end
 end

@@ -1,3 +1,18 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.icon{
+  height: 75px;
+  padding: 20px; 
+}
+
+.base-bar {
+  border-bottom: 3px #3e95ce solid;
+}
+
+.small {
+  height: 30px;
+}

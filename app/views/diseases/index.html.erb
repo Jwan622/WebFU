@@ -44,7 +44,7 @@
 			<%= image_tag(@diseases.first.photo) %>
 		<% else %>
 			<h1>You May Die of Multiple Diseases</h1>
-			<h4>Here is a list of your possible ailments:</h4>	
+			<h4>Here is a list of your possible ailments:</h4>
 			<% @diseases.each do |disease| %>
 				<%= disease.name  %>
 				<%= disease.photo %>
@@ -52,4 +52,9 @@
 			<% end %>
 		<% end %>
 	</div>
+  <div class="row">
+    <p>Perhaps taking the following action could keep you alive for a few extra days:</p>
+    <% Remedy.all.sample %>
+  </div>
 </div>
+

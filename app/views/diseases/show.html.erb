@@ -1,6 +1,65 @@
+<<<<<<< HEAD
 <h1>You will probably die of <% @disease.name %></h1>
+=======
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-offset-1 col-md-2">
+      <%= image_tag("webfu.png", class: "icon" ) %>
+    </div>
+    <div class="col-md-4 icon">
+       <div class="form-group">
+        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Search">
+>>>>>>> master
 
-<%= image_tag(@disease.photos) %>
+      </div>
+    </div>
+    <div class="col-md-offset-1 col-md-2">
+      <%= image_tag("nav_bar.png", class: "icon") %>
+    </div>
+  </div>
+  <div class="row base-bar">
+    <div class="col-md-offset-1  col-md-2">
+      <p>Health A-Z</p>
+    </div>
+    <div class="col-md-2">
+      <p>Drugs & Supplements</p>
+    </div>
+    <div class="col-md-2">
+      <p>Living Healthy</p>
+    </div>
+    <div class="col-md-2">
+      <p>Family & Pregnancy</p>
+    </div>
+    <div class="col-md-2">
+      <p>News & Experts</p>
+    </div>
+    <div class="col-md-1">
+      <%= image_tag("social_media.png", class: "small") %>
+    </div>
+  </div>
 
+<<<<<<< HEAD
 <%= Remedy.all.sample %>
 
+=======
+  <div class="row">
+
+<% if @diseases.count == 1 %>
+	<h1>You will probably die of @diseases.first.name </h1>
+
+	<%= image_tag(@diseases.first.photo) %>
+<% else %>
+	<h1>You May Die of Multiple Diseases</h1>
+	<h4>Here is a list of your possible ailments:</h4>	
+	<% @diseases.each do |disease| %>
+		<%= disease.name  %>
+		<%= disease.photo %>
+		<%= disease.description %>
+	<% end %>
+
+<% end %>
+  </div>
+
+ </div>
+ </div>
+>>>>>>> master

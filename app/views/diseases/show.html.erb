@@ -1,5 +1,14 @@
-<h1>You will probably die of @disease.name </h1>
+<% if @diseases.count == 1 %>
+	<h1>You will probably die of @diseases.first.name </h1>
 
-<%= image_tag(@disease.photos) %>
+	<%= image_tag(@diseases.first.photo) %>
+<% else %>
+	<h1>You May Die of Multiple Diseases</h1>
+	<h4>Here is a list of your possible ailments:</h4>	
+	<% @diseases.each do |disease| %>
+		<%= disease.name  %>
+		<%= disease.photo %>
+		<%= disease.description %>
+	<% end %>
 
-<p>Find me in app/views/diseases/show.html.erb</p>
+<% end %>

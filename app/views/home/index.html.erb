@@ -36,7 +36,7 @@
   </div>
 
   <div class="row text-center" id= "symptoms">
-    <%= form_for :disease do |f| %>
+    <%= form_for :disease, url: diseases_path, method: :post do |f| %>
   <p><%= f.label "Do you have a fever?" %></p>
   <p><%= f.label "Yes" %>
   <%= f.radio_button("fever", "yes") %>

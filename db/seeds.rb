@@ -1,7 +1,22 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+class Seeds
+	def create
+		generate_diseases
+	end
+
+	def generate_diseases
+		Disease.create(name: "Dysentery", description: , photo: )
+		Disease.create(name: "Dengue Fever", description: , photo: )
+		Disease.create(name: "Vampire", description: , photo: )
+		Disease.create(name: "Werewolf", description: , photo: )
+		Disease.create(name: "Zombie", description: , photo: )
+		Disease.create(name: "Syphilis", description: , photo: )
+		Disease.create(name: "Cholera", description: , photo: )
+		Disease.create(name: , description: , photo: )
+	end
+
+	def self.create
+    new.create
+  end
+end
+
+Seeds.create
